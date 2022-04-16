@@ -1,6 +1,5 @@
-/* This targets my <body> tag in the HTML file */
+/* This targets my <body> tag in my HTML file */
 body {
-    font-family: sans-serif;
     width: 50%;
     max-width: 800px;
     min-width: 480px;
@@ -8,7 +7,7 @@ body {
     padding: 25px;
 }
 
-/* This targets my <div> element named "container" in the HTML file */
+/* This targets my div element named "container" in the HTML file */
 #container {
     background-color: green;
     border: 2px solid white;
@@ -16,11 +15,12 @@ body {
     margin-top: 150px;
 }
 
-/* This targets my HTML <form> tag in the HTML file */
+/* This targets my HTML form tag in the HTML file  */
 #form {
     margin-top: 40px;
+    margin-left: 240px;
 }
-
+    
 /* This targets my <h1> tags in the HTML file */
 h1 {
     text-align: center;
@@ -32,11 +32,12 @@ p {
     text-align: center;
     color: white;
     margin-top: 40px;
+    font-size: 20px;
 }
 
 /* This targets my HTML form <label> tag in the HTML file */
 label {
-    margin-left: 150px;
+    margin-left: 0px;
     color: white;
 }
 
