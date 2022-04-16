@@ -10,9 +10,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Use a <div> element with the id name of "container" that will hold an <h1> tag, <p> tags and my HTML <form> tag inside -->
+    <div id="container">
+        <!-- Use a <h1> tag that says "Number Guessing Game" -->
+        <h1>Number Guessing Game</h1>
+        
+        <!-- Use a <p> tag that says "Guess a number between 1 - 100" -->
+        <p>Guess a number between 1 - 100</p>
 
-    
+        <!-- Create an HTML form with an id name of "form" that uses an onsubmit event.  This onsubmit event occurs when a form is submitted.  This function (myFunction) gets triggered and passes an event -->
+        <!-- I also added a reset button with an onclick event.  When a user clicks on this reset button, it will execute my JavaScript function named "fun()"  -->
+        <form id="form" onsubmit="myFunction(event)">
+        <label for="userInput">Enter a guess:</label>
+        <input type="text" id="userInput">
+        <input type="submit" value="Submit">
+        <input type="button" value="Reset" onClick="fun()"/>
+
+        <!-- Use a <p> tag with an id name of "outputText" that holds no content inside it -->
+        <p id="outputText"></p>
+        </form>
+    </div>
+
     <!-- link JavaScript file -->
     <script src="verb.js"></script>
 </body>
