@@ -19,23 +19,21 @@
     <p>Guess a number between 1 and 100</p>
 
     <!-- Use a <p> tag that says "You have three guesses" -->
-    <p>You have three guesses:</p>
+    <p>You have three guesses to get the right answer:</p>
  
     <!-- Create an HTML form with an id name of "form" that uses an onsubmit event.  This onsubmit event occurs when a form is submitted. This function (myFunction) gets triggered and passes an event-->
-    <!-- I added three input text fields that has an id of "userInput" so the user can type in three choices / three guesses-->
     <!-- I also added a reset button with an onclick event. When a button is clicked, this will execute my JavaScript function called "fun()" -->
     <form id="form" onsubmit="myFunction(event)">
         <label for="userInput"></label>
-        <input type="text" id="userInput" size="3" maxlength="2"/> 
-        <input type="text" id="userInput" size="3" maxlength="2"/> 
-        <input type="text" id="userInput" size="3" maxlength="2"/> 
+        <input type="text" id="userInput"/> 
         <input type="submit" value="Submit">
         <input type="button" value="Start Again" onClick="fun()"/>
         </form>
 
-    
         <!-- Use a <p> tag with an id name of "outputText" that holds no content inside it -->
         <p id="outputText"></p>
+
+
     </div>
     
     <!-- link JavaScript -->
