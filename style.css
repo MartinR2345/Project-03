@@ -15,3 +15,35 @@ body {
     border-radius: 70px 20px 70px 20px;
     margin-top: 150px;
 }
+
+/* This targets my HTML <form> tag in the HTML file */
+#form {
+    margin-top: 40px;
+}
+
+/* This targets my <h1> tags in the HTML file */
+h1 {
+    text-align: center;
+    color: white;
+}
+
+/* This targets my <p> tags in the HTML file */
+p {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+/* This targets my HTML form <label> tag in the HTML file */
+label {
+    margin-left: 150px;
+    color: white;
+}
+
+/* This targets my <p> tag named "outputText" in the HTML file */
+#outputText {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 55px;
+}
