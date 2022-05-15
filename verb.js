@@ -1,48 +1,42 @@
 // Create a variable named "output" and grab the div element named "outputText" from the DOM by using the document.getElementById() method. I can use this to read or edit(modify) an HTML element
 let output = document.getElementById('outputText');
 
-
-// Create a variable name "maxTries" and assigned the max number of tries a user attempts
-let maxTries = 3;
+// Grab my from the DOM the span element "changeForward"
+let int = document.getElementById('guesses');
 
 // I'm generating a random value by creating a variable, named "number" and assigned Math.floor() with Math.random() times by 100. This will generate a random number that isn't 1 or a whole number and round it to the nearest integer 
 let number = Math.floor(Math.random() * 100) + 1
 
-// Create a function named myFunction that takes in one parameter letter "e" and write e.preventDefault() inside the function.
-// The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
-// Create a variable named input and select the element name "userInput" from the DOM with the getElementById() method. Assigned the value property to return the value attribute of a text field.
-// I use an if/else statement to create a condition that will check to see if the input is equal to my number variable and then if that statement is true then display the output's inner HTML content with the text of "You guessed right, your number was" I'm using "template literals". 'Template literals are string literals allows embedded expressions using backtick characters(``). 
-// If the condition isn't true then check if input is less than number and display the output's inner HTML with the text of "You guessed too low!" inside in a string.
-// I use another if statement to create a condition that will check if the input is greater than the number variable then display the output's inner HTML with the text of "You guessed too high!" inside of a string.
-// I use another if statement to create a condition that will check if input is greater than maxTries then display the output's inner HTML with the text of "Sorry but all three guesses were wrong. The correct number is ${number}"
+// This will keep track of the number of guesses a user enters
+let numberOfGuesses = 0;
+
 
 
 function myFunction(e){
     e.preventDefault()
-    // alert("form is submitted")
+    // alert("form is submitted")\
 
     let input = document.getElementById('userInput').value;
 
+    numberOfGuesses += 1;
+    guesses.innerHTML = numberOfGuesses;
+
     if (input == number){
         output.innerHTML = `You guessed right, your number was ${number}`
+        console.log(input);
     } else if (input < number){
-        output.innerHTML = "You guessed too low! Try Again!"
-
-
-    };
-    if (input > number){
+        output.innerHTML = "You guessed too low! Try Again!"  
+    } else if (input > number){
         output.innerHTML = "You guessed too high! Try Again"
     }
-   
-    // if (maxTries > number) {
-    //     output.innerHTML = `Sorry but all three guesses were wrong. The correct number is ${number}`
-
-    // }
- 
-
+    if (numberOfGuesses > 3) {
+        guesses.innerHTML = `Sorry but all three guesses were wrong. Correct number is: ${number}`;
+    }
 }
 
-// Create a function named "fun()" with no parameters
+
+// RESET BUTTON
+// Create a function named "fun()" with no parameters that will reset this number guessing game 
 // Inside this function, I will select the id name of "form" from the DOM with the document.getElementById() and use the reset() property.
 // Select the id name of "userInput" from the DOM with the document.getElementById() and accessed the inner HTML content of that element and assigned it to an empty strings. This will actually reset the data.
 // Select the id name of "outputText" from the DOM with the document.getElementById() and accessed the inner HTML content of that element and assigned it to an empty strings. This will actually reset the data.
@@ -52,4 +46,5 @@ function fun(){
 
     document.getElementById('userInput').innerHTML = "";
     document.getElementById('outputText').innerHTML = "";
+    document.getElementById('guesses').innerHTML = "" + 0;
 }
