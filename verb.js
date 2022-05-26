@@ -22,23 +22,32 @@ function myFunction(e){
     guesses.innerHTML = numberOfGuesses;
 
     if (input === number){
-        output.innerHTML = `You guessed right, your number was ${number}`
-        console.log(input);
+        output.innerText = `You guessed right, your number was ${number}`
     } else if (input < number){
-        output.innerHTML = "You guessed too low! Try Again!"  
+        output.innerText = "You guessed too low! Try Again!"  
     } else if (input > number){
-        output.innerHTML = "You guessed too high! Try Again"
+        output.innerText = "You guessed too high! Try Again"
     }
     if (numberOfGuesses > 3) {
-        guesses.innerHTML = `Sorry but all three guesses were wrong. Correct number is: ${number}`;
+        guesses.innerText = `Sorry but all three guesses were wrong. Correct number is: ${number}`;
     }
    
 }
 
 
-// PlAY AGAIN BUTTON
-// Create a function named "reloadThePage()" with no parameters that will reload this number guessing game web browser
-function reloadThePage(){
-    window.location.reload();
-     
+// RESET BUTTON
+// Create a function named "resetForm()" with no parameters that will reset this number guessing game 
+function resetForm(){
+    // Reset the form 
+    document.getElementById('form').value = '';
+
+    // Reset the input text 
+    document.getElementById('userInput').value = "";
+
+    // Reset the output text
+    document.getElementById('outputText').innerText = "";
+
+    // Reset the numberOfGuesses
+    numberOfGuesses = 0;
+    document.getElementById('guesses').innerText = numberOfGuesses;
 }
