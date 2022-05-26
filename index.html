@@ -28,9 +28,9 @@
      <!-- I also added an input button with an onclick event. When this button is clicked, this will execute my JavaScript function called "reloadThePage()" and reload the web browser -->
      <form id="form" onsubmit="myFunction(event)">
          <label for="userInput"></label>
-         <input type="text" id="userInput"/> 
+         <input type="number" id="userInput" min="1" max="100"/> 
          <input type="submit" value="Submit">
-         <input type="button" value="Play Again" onClick="reloadThePage()"/>
+         <input type="button" value="Reset" onclick="resetForm()">
          </form>
      
     <!-- <!-- Use a p element that holds a span tag with an id called “guesses” This holds a “0” value -->
