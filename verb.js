@@ -39,7 +39,7 @@ function myFunction(e){
 // Create a function named "resetForm()" with no parameters that will reset this number guessing game 
 function resetForm(){
     // Reset the form 
-    document.getElementById('form').value = '';
+    document.getElementById('form').value = "";
 
     // Reset the input text 
     document.getElementById('userInput').value = "";
