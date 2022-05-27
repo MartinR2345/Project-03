@@ -34,7 +34,6 @@ function myFunction(e){
    
 }
 
-
 // RESET BUTTON
 // Create a function named "resetForm()" with no parameters that will reset this number guessing game 
 function resetForm(){
