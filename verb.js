@@ -16,8 +16,10 @@ function myFunction(e){
     e.preventDefault()
     // alert("form is submitted")\
 
+    // Grab the the text value a user types from the DOM
     let input = document.getElementById('userInput').value;
 
+    // Update my numberOfGuesses 
     numberOfGuesses += 1;
     guesses.innerHTML = numberOfGuesses;
 
@@ -40,13 +42,13 @@ function resetForm(){
     // Reset the form 
     document.getElementById('form').value = "";
 
-    // Reset the input text 
+    // Reset the input text a user enters 
     document.getElementById('userInput').value = "";
 
-    // Reset the output text
+    // Reset the output text 
     document.getElementById('outputText').innerText = "";
 
-    // Reset the numberOfGuesses
+    // Reset the numberOfGuesses by setting it to 0 and grabbing from Dom the span element "guesses" and changing the innerText to numberOfGuesses
     numberOfGuesses = 0;
     document.getElementById('guesses').innerText = numberOfGuesses;
 }
